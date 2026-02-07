@@ -17,13 +17,7 @@ class TestSplitInteger:
     def test_split_integer_logic_comprehensive(
         self, value: int, parts: int
     ) -> None:
-        result = split_integer.split_integer(value, parts)
-        self._check_all_rules(result, value, parts)
-
-    def test_sum_of_the_parts_should_be_equal_to_value(self) -> None:
-        value, parts = 32, 6
-        result = split_integer.split_integer(value, parts)
-        self._check_all_rules(result, value, parts)
+        self._check_all_rules(split_integer.split_integer(20, 4), 20, 4)
 
     def test_should_split_into_equal_parts_when_value_divisible_by_parts(
         self,

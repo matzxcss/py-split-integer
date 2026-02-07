@@ -17,7 +17,9 @@ class TestSplitInteger:
     def test_split_integer_logic_comprehensive(
         self, value: int, parts: int
     ) -> None:
-        self._check_all_rules(split_integer.split_integer(20, 4), 20, 4)
+        self._check_all_rules(
+            split_integer.split_integer(value, parts), value, parts
+        )
 
     def test_should_split_into_equal_parts_when_value_divisible_by_parts(
         self,
